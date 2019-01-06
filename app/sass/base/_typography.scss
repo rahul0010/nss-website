@@ -1,0 +1,49 @@
+html
+{
+    font-size: 62.5%;
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+p,span,a
+{
+    font-family: 'Roboto', sans-serif;
+    @include fluid-type(14px, 18px);
+    font-weight: 300;    
+}
+h1,
+.heading__primary--main
+{
+    @include fluid-type(22px, 38px) ;
+}
+
+h2
+{
+    @include fluid-type(20px, 24px);
+}
+
+.heading__primary
+{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    grid-column: 2 / 3;
+}
+
+.heading__primary--sub
+{
+    @include fluid-type(16px, 20px);
+}
+
+h1,h2,h3,h4,h5,h6
+{
+    grid-column: 1 / -1;
+}
+
+.heading-secondary
+{
+    grid-column: 1 / -1;
+    @include fluid-type(22px, 32px);
+}

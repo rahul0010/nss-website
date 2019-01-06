@@ -1,0 +1,48 @@
+.header
+{
+    grid-column: full-start / full-end;
+    clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+    background-image:  linear-gradient(to right bottom, rgba(#136a8a,.8), rgba(#267871,.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    color: #fff;
+    display: grid;
+    grid-template-columns:  minmax(3rem,1fr) minmax(min-content, 75rem) minmax(3rem,1fr);
+
+    .logo
+    {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        &__img
+        {
+            margin-right: 1rem;
+            height: 10vh;
+        }
+
+        &__text
+        {
+            display: flex;
+            flex-direction: column;
+            text-shadow: 0 1px 3px #fff;
+            
+            &--main
+            {
+                @include fluid-type(20px, 32px);
+                font-weight: 500;
+            }
+        }
+        
+        @media only screen and  (min-width: 56.2em) {
+        }
+    }
+
+}
